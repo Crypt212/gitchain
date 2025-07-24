@@ -4,7 +4,7 @@ fn greet(name: String) -> String {
 }
 
 #[ic_cdk::query]
-fn simple_greeting() -> String {
+fn simple_greet() -> String {
     format!("Hello from Ahmed!")
 }
 
