@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "gitchain_backend": {
+      "candid": "src/gitchain_backend/gitchain_backend.did",
+      "package": "gitchain_backend",
+      "type": "rust"
+    },
+    "gitchain_frontend": {
+      "dependencies": [
+        "gitchain_backend"
+      ],
+      "source": [
+        "src/gitchain_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "gitchain_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
