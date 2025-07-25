@@ -1,4 +1,6 @@
+type Repo = record { cid : text; owner : text; name : text; timestamp : nat64 };
 service : {
-    "greet": (text) -> (text) query;
-    "simple_greet": () -> (text) query;
+  get_repo : (text) -> (opt Repo) query;
+  get_user_repos : (text) -> (vec Repo) query;
+  store_repo : (text, text) -> (text);
 }
